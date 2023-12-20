@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+section#banner{
+    position: relative;
+    z-index: 80;
+    padding: 0;
+    background-image: url(../media/stars.png);
+    h1{
+        position: relative;
+        top: 30vh;
+        z-index: 99;
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px;
+        text-align: center;
+        color: white;
+    }
+}
+
+
+.heavenlybodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+#planet1{
+    background-image: url(../media/planet1.gif);
+    width: 400px;
+    height: 800px;
+    animation:planet1motion 120s linear infinite;
+}
+
+@keyframes planet1motion{
+    0%  {transform: scale(0.6) translate(1000vw, -50);}
+    100%{transform: scale(2.0) translate(350vw, 25vw);}
+}
+
+#planet2{
+    background-image: url(../media/planet2.gif);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    animation: planet2motion 60s linear infinite;
+}
+
+@keyframes planet2motion{
+    0%  {transform: scale(0.2) translate(-200px, 700px);}
+    100%{transform: scale(1.5) translate(1900px, 100px);}
+}
+
+#gasgiant{
+    background-image: url(../media/gasgiant.gif);
+    width: 400px;
+    height: 400px;
+    animation: gasgiantmotion 30s linear infinite;
+}
+
+@keyframes gasgiantmotion{
+    from {transform: scale(0.5) translate(-35vw,25vh);}
+    to {transform: scale(1.5) translate(60vw,-50vh);}
+}
+
+#galaxy{
+    background-image: url(../media/galaxy.gif);
+    width: 200px;
+    height: 250px;
+    animation: galaxymotion 25s linear infinite;
+}
+
+@keyframes galaxymotion{
+    from {transform: rotate(0deg) scale(0.5);}
+    to {transform: rotate(360deg) scale(2.5);}
+}
